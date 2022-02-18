@@ -20,10 +20,7 @@ function rpsGameWinner(game) {
   if (game.length != 2) {
     return console.log("WrongNumberOfPlayers");
   }
-  if (
-  !game[0][1].match(/\bPE\b|\bPA\b|\bTE\b/gi) || 
-  !game[1][1].match(/\bPE\b|\bPA\b|\bTE\b/gi)
-  ) {
+  if (!game[0][1].match(/\bPE\b|\bPA\b|\bTE\b/gi) || !game[1][1].match(/\bPE\b|\bPA\b|\bTE\b/gi)){
     return console.log("NoSuchStrategyError");
   } else {
     if (game[0][1] == game[1][1]) return console.log(`Vencedor: ${game[0]}`);
