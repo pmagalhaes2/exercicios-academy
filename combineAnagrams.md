@@ -44,3 +44,23 @@ function combineAnagrams(words) {
 }
 
 ```
+
+**Resolução 2:**
+```javascript
+
+function combineAnagrams(words) {
+  const anagrams = {};
+
+  words.forEach((word) => {
+    let sortedWord = word.toLowerCase().split("").sort().join("");
+
+    if (anagrams[sortedWord]) {
+      return anagrams[sortedWord].push(word);
+    }
+    anagrams[sortedWord] = [word];
+  });
+
+  return Object.values(anagrams);
+}
+
+```
