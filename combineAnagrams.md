@@ -21,10 +21,7 @@ function sortStr(str) {
   if (!str) {
     return;
   }
-  str = str.toLowerCase();
-  str = str.split("");
-  str = str.sort();
-  str = str.join("");
+  str = str.toLowerCase().split('').sort().join('');
   return str;
 }
 
