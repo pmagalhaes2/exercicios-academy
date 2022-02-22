@@ -18,18 +18,18 @@ function rpsGameWinner(game) { if (game.length != 2) { throw 'WrongNumberOfPlaye
 ```javascript
 function rpsGameWinner(game) {
   if (game.length != 2) {
-    return console.log("WrongNumberOfPlayers");
+    throw new Error("WrongNumberOfPlayers");
   }
-  if (!game[0][1].match(/\bPE\b|\bPA\b|\bTE\b/gi) || !game[1][1].match(/\bPE\b|\bPA\b|\bTE\b/gi)){
-    return console.log("NoSuchStrategyError");
+  if (!game[0][1].match(/\bPE\b|\bPA\b|\bTE\b/gi) || !game[1][1].match(/\bPE\b|\bPA\b|\bTE\b/gi)) {
+    throw new Error("NoSuchStrategyError");
   } else {
     if (game[0][1] == game[1][1]) return console.log(`Vencedor: ${game[0]}`);
-    if (game[0][1].toUpperCase() == "PA" && game[1][1].toUpperCase() == "PE") 
-	    return console.log(`Vencedor: ${game[0]}`);
-    if (game[0][1].toUpperCase() == "PE" && game[1][1].toUpperCase() == "TE") 
-	    return console.log(`Vencedor: ${game[0]}`);
-    if (game[0][1].toUpperCase() == "TE" && game[1][1].toUpperCase() == "PA") 
-	    return console.log(`Vencedor: ${game[0]}`);
+    if (game[0][1].toUpperCase() == "PA" && game[1][1].toUpperCase() == "PE")
+      return console.log(`Vencedor: ${game[0]}`);
+    if (game[0][1].toUpperCase() == "PE" && game[1][1].toUpperCase() == "TE")
+      return console.log(`Vencedor: ${game[0]}`);
+    if (game[0][1].toUpperCase() == "TE" && game[1][1].toUpperCase() == "PA")
+      return console.log(`Vencedor: ${game[0]}`);
     return console.log(`Vencedor: ${game[1]}`);
   }
 }
