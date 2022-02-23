@@ -2,7 +2,7 @@
 
 Um torneio de Pedra-Papel-Tesoura é representado por chaves. Cada chave pode ser composta por duas outras chaves ou um jogo. Exemplo:
 
-![](https://t3069008.p.clickup-attachments.com/t3069008/9153caa1-2d87-471a-8e5b-d885eea35699/image.png)
+![](./assets/tournamentGameWinner.png)
   
   Nesse torneio exemplo, na primeira chave mais externa, Armando ganha de Dave, Michael ganha de Richard, sendo assim, Armando joga contra Michael e, por fim, Armando é o vencedor.
 
